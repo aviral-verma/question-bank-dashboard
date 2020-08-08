@@ -1,0 +1,68 @@
+<h3>Add new Question</h3>
+<hr>
+
+<!-- frm is a reference to the entire form -->
+<form #frm="ngForm">
+    <div class="form-group">
+        <label for="questName">Question</label>
+        <input id="questName" #compName="ngModel" name="questName" type="text" [(ngModel)]="quest.questions"
+            required minlength="5" maxlength="40" class="form-control">
+    </div>
+    <div class="row">
+
+
+        <div class="col">
+
+            <div class="form-group">
+                <label for="optOne">Option-1</label>
+                <input id="optOne" #contName="ngModel" name="optOne" type="text" [(ngModel)]="quest.A"
+                    required minlength="5" maxlength="30" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="optTwo">Option-2</label>
+                <input id="optTwo" #contName="ngModel" name="optTwo" type="text" [(ngModel)]="quest.B"
+                    required minlength="5" maxlength="30" class="form-control">
+            </div>
+
+
+        </div>
+
+        <div class="col">
+
+            
+            <div class="form-group">
+                <label for="optThree">Option-3</label>
+                <input id="optThree" #contName="ngModel" name="optThree" type="text" [(ngModel)]="quest.C"
+                    required minlength="5" maxlength="30" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="optFour">Option-4</label>
+                <input id="optFour" #contName="ngModel" name="optFour" type="text" [(ngModel)]="quest.D"
+                    required minlength="5" maxlength="30" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="answer">Answer</label>
+                <input id="answer" #contName="ngModel" name="answer" type="text" [(ngModel)]="quest.Answer"
+                    required minlength="1" maxlength="30" class="form-control">
+            </div>
+            
+
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label>&nbsp;</label>
+        <div>
+            <button class="btn btn-primary" [disabled]="frm.invalid" [ngClass]="{'btn-warning': frm.invalid}"
+                (click)="save()">Submit</button>
+        </div>
+    </div>
+</form>
+
+<!-- 
+    <form #frm="ngForm">
+ -->

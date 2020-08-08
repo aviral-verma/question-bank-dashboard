@@ -1,0 +1,45 @@
+<h1>List of QuestionBanks</h1>
+<hr>
+
+<button [ngClass]="getBtnClass('first')" [disabled]="service.pageNum===1" class="btn btn-primary" (click)="gotoPage()" >First</button> &nbsp;
+<button [ngClass]="getBtnClass('prev')" [disabled]="service.pageNum===1" class="btn btn-primary" (click)="gotoPage('prev')">Previous</button> &nbsp;
+
+Showing page {{ service.pageNum }} of {{ lastPage }} &nbsp;
+
+<button [ngClass]="getBtnClass('next')" [disabled]="service.pageNum===lastPage" class="btn btn-primary" (click)="gotoPage('next')">Next</button> &nbsp;
+<button [ngClass]="getBtnClass('last')" [disabled]="service.pageNum===lastPage" class="btn btn-primary" (click)="gotoPage('last')" >Last</button>
+
+<br><br>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th><h3>Sr. No</h3></th>
+            <th><h3>Name of the QuestionBank</h3></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let questionbank of questionbanks; index as i">
+            <td><h4>{{ i + 1 }}</h4></td>
+            <td class="app-clickable" [routerLink]="['/view-details', questionbank.questionbank_list.toLowerCase()]"><h4>{{ questionbank.questionbank_list }}</h4></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary" [routerLink]="['/add-new-questionbank']"><h6>Add new Question bank</h6></button>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary" [routerLink]="['/delete-questionbank']"><h6>Delete a Question bank</h6></button>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary" [routerLink]="['/edit-questionbank']"><h6>Edit a Question bank</h6></button>
+    </div>
+</div>
+
+
+<!-- round brackets arount an attribute means function binding -->
+<!-- 'click' here is an event -->
+<!-- <button class="btn btn-primary" (click)="loadMore()">Load more</button> -->

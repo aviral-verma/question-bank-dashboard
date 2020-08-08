@@ -1,0 +1,14 @@
+<div class="alert alert-primary">
+    <div class="container">
+        <h1>QuestionBank Dashboard</h1>
+    </div>
+</div>
+
+<div class="container">
+    <button routerLink="/home" class="btn btn-link"><h5>Home</h5></button> |
+    <span *ngIf="authService.isUserLoggedIn">
+        <button routerLink="/view-all" class="btn btn-link"><h5>View all</h5></button> |
+        <button (click)="logout()" class="btn btn-link"><h5>Logout</h5></button>
+    </span>
+    <button *ngIf="!authService.isUserLoggedIn" routerLink="/login" class="btn btn-link"><h5>Login</h5></button>
+</div>
