@@ -8,6 +8,7 @@
     <button routerLink="/home" class="btn btn-link"><h5>Home</h5></button> |
     <span *ngIf="authService.isUserLoggedIn">
         <button routerLink="/view-all" class="btn btn-link"><h5>View all</h5></button> |
+        <button routerLink="/questionpaper-list" class="btn btn-link"><h5>Question Papers</h5></button> |
         <button (click)="logout()" class="btn btn-link"><h5>Logout</h5></button>
     </span>
     <button *ngIf="!authService.isUserLoggedIn" routerLink="/login" class="btn btn-link"><h5>Login</h5></button>

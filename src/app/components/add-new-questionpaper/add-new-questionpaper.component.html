@@ -1,0 +1,29 @@
+<h1 class="question-heading">List of available Questions</h1>
+
+<div *ngFor="let que of quest; index as i">
+        <h2><b>Q.{{i+1}} {{que.questions}}</b>
+        </h2>
+        <div class="row">
+            <div class="col">
+                <div class="option"><p>A. {{que.A}}</p>
+                </div>
+                <div class="option"><p>C. {{que.C}}</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="option"><p>B. {{que.B}}</p>
+                </div>
+                <div class="option"><p>D. {{que.D}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="correct-option"><p><b>Answer: {{que.Answer}}</b></p>
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<button class="btn btn-primary" [routerLink]="['/add-new-question']"><h6>Add new Question</h6></button>

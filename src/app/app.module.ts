@@ -18,6 +18,9 @@ import { AddNewQuestionbankComponent } from './components/add-new-questionbank/a
 import { AddNewQuestionComponent } from './components/add-new-question/add-new-question.component';
 import { DeleteQuestionbankComponent } from './components/delete-questionbank/delete-questionbank.component';
 import { EditQuestionbankComponent } from './components/edit-questionbank/edit-questionbank.component';
+import { QuestionpaperListComponent } from './components/questionpaper-list/questionpaper-list.component';
+import { QuestionpaperDetailsComponent } from './components/questionpaper-details/questionpaper-details.component';
+import { AddNewQuestionpaperComponent } from './components/add-new-questionpaper/add-new-questionpaper.component';
 
 const routeConfig: Array<Route> = [
   {
@@ -54,6 +57,18 @@ const routeConfig: Array<Route> = [
     component:  QuestionbankDetailsComponent 
   },
   {
+    path: 'questionpaper-list',
+    component:  QuestionpaperListComponent 
+  },  
+  {
+    path: 'questionpaper-details',
+    component:  QuestionpaperDetailsComponent 
+  },  
+  {
+    path: 'add-new-questionpaper',
+    component: AddNewQuestionpaperComponent 
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
@@ -77,7 +92,10 @@ const routeConfig: Array<Route> = [
     AddNewQuestionbankComponent,
     AddNewQuestionComponent,
     DeleteQuestionbankComponent,
-    EditQuestionbankComponent
+    EditQuestionbankComponent,
+    QuestionpaperListComponent,
+    QuestionpaperDetailsComponent,
+    AddNewQuestionpaperComponent
   ],
   imports: [
     BrowserModule,

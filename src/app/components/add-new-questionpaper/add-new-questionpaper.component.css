@@ -1,0 +1,36 @@
+
+  .option {
+    display: block;
+    font-size: 18px;
+    width: 300px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid #808080 !important;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    transition: 0.4s all;
+  }
+  
+  .option:hover {
+    cursor: pointer;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border: 2px solid #341f97;
+    color: #341f97;
+  }
+  .option.active {
+    background-color: #341f97;
+    color: #fff;
+  }
+
+  .correct-option {    
+    display: block;
+    font-size: 18px;
+    width: 300px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    transition: 0.4s all;
+  }

@@ -74,4 +74,14 @@ export class QuestionbankService  {
     return this.http.get(baseUrl + '/' + questionbankId, options);
     
   }
+
+  getAllQuestions(): Observable<any> {
+    const options = {
+      headers: {
+        'authorization': 'Bearer ' + this.authService.token
+      }
+    };
+    return this.http
+      .get('http://localhost:3000/questions', options);
+  }
 }
